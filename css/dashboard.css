@@ -5,10 +5,15 @@
   margin-top: var(--topbarheight);
   display: grid;
   grid-template-areas:
-    "data1 data1 data2 data2"
-    "data1 data1 data2 data2"
-    "data3 data3 data4 data4"
-    "data3 data3 data4 data4";
+    "data1 data1 data1 data2 data2 data2"
+    "data1 data1 data1 data2 data2 data2"
+    "data1 data1 data1 data4 data4 data4"
+    "data3 data3 data3 data4 data4 data4"
+    "data3 data3 data3 data5 data5 data5"
+    "data3 data3 data3 data5 data5 data5";
+
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
   gap: 10px;
   padding: 10px;
 }
@@ -17,8 +22,6 @@
   grid-area: data1;
   height: 100%;
   width: 100%;
-
-  /* position: absolute; */
   box-shadow: 1px 1px 5px 2px var(--shadow);
   border-radius: 10px;
   padding: 10px;
@@ -59,51 +62,35 @@
 
 .graphs {
   display: flex;
-  justify-content: space-around;
   width: 100%;
-  gap: 10px;
-  transform-origin: bottom;
-  position: relative;
 }
-
-.graphs .tc-item {
-  background: linear-gradient(to top, var(--accent), var(--accent));
-  height: 10%;
-  max-height: 200px;
-  height: 20px;
-  width: 60px;
-  margin: 0 auto;
-  display: flex;
-  justify-content: center;
-  transition: all 0.3s ease-in-out;
-  transform: rotatex(180deg);
-  transform-origin: top;
-}
-
 .top-corp .graph-item {
-  position: relative;
-  margin-top: 220px;
   z-index: 2;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  justify-content: start;
 }
+.graphs .tc-item {
+  position: absolute;
+  transition: all 0.3s ease-in-out;
+  background-color: var(--accent);
+  width: 60px;
+  bottom: 35px;
+}
+
 .graph-item > .tc-label {
   font-size: clamp(0.5rem, 2vw, 0.6rem);
   position: absolute;
-  top: 10px;
+  bottom: 10px;
   text-align: center;
-  width: 100%;
+  width: 60px;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
 }
+
 .top-corp .graph-label {
-  height: 100%;
-  width: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-.top-corp .graph-label {
-  height: 100%;
   width: 100%;
   position: absolute;
   top: 40px;
@@ -111,11 +98,11 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  height: 225px;
 }
 .top-corp .graph-label .linear {
   display: flex;
   gap: 10px;
+  height: 40px;
 }
 .top-corp .graph-label .linear span:nth-child(1) {
   font-size: clamp(0.5rem, 2vw, 0.7rem);
@@ -134,6 +121,30 @@
 /* ... Top Outlets */
 .top-outlets {
   grid-area: data2;
+  height: 100%;
+  width: 100%;
+  box-shadow: 1px 1px 5px 2px var(--shadow);
+  border-radius: 10px;
+  padding: 10px;
+}
+.top-users {
+  grid-area: data4;
+  height: 100%;
+  width: 100%;
+  box-shadow: 1px 1px 5px 2px var(--shadow);
+  border-radius: 10px;
+  padding: 10px;
+}
+.top-users {
+  grid-area: data4;
+  height: 100%;
+  width: 100%;
+  box-shadow: 1px 1px 5px 2px var(--shadow);
+  border-radius: 10px;
+  padding: 10px;
+}
+.top-privileges {
+  grid-area: data5;
   height: 100%;
   width: 100%;
   box-shadow: 1px 1px 5px 2px var(--shadow);

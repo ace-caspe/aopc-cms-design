@@ -22,7 +22,7 @@ toggle.addEventListener("change", function () {
 let corporate = [
   {
     name: "Comapny1",
-    totalVisit: "60",
+    totalVisit: "10",
   },
   {
     name: "Comapny2",
@@ -30,7 +30,7 @@ let corporate = [
   },
   {
     name: "Comapny3",
-    totalVisit: "1020",
+    totalVisit: "50",
   },
   {
     name: "Odecci",

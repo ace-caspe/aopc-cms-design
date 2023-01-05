@@ -1,0 +1,30 @@
+:root {
+  --light: white;
+  --dark: Black;
+  --primary: black;
+  --secondary: #d7d2cb;
+  --secondary-light: white;
+  --accent: #c89328;
+  --shade: rgba(125, 125, 125, 0.5);
+  --shadow: rgba(200, 200, 200, 0.5);
+  --sidebarwidth: 200px;
+  --topbarheight: 100px;
+  --top-corp-user-height: 300px;
+  --top-corp-user-width: 600px;
+  --top-corp-graph-width: 60px;
+  font-family: "Montserrat-Reg";
+}
+
+.darkmode {
+  --light: black;
+  --dark: white;
+}
+
+@font-face {
+  font-family: "Montserrat-Reg";
+  src: url("/fonts/Montserrat/Montserrat-Regular.ttf");
+}
+@font-face {
+  font-family: "Montserrat-Bold";
+  src: url("/fonts/Montserrat/Montserrat-Bold.ttf");
+}

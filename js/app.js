@@ -38,13 +38,34 @@ let corporate = [
   },
   {
     name: "asdasd dasda asdasd",
-    totalVisit: "25",
+    totalVisit: "60",
   },
 ];
 
 const topCorpItem = document.querySelectorAll(".graph-item");
 corporate.map((value, key) => {
   topCorpItem[key].children[0].style.height = `${value.totalVisit}px`;
-  topCorpItem[key].children[0].title = value.totalVisit;
+  topCorpItem[
+    key
+  ].children[0].title = `${value.totalVisit} total employee visit`;
   topCorpItem[key].children[1].innerHTML = value.name;
 });
+
+fetch("http://192.168.100.90/api/ApiBusiness/BusinessList", {
+  method: "GET",
+  headers: {
+    "Content-Type": "application/json",
+    Authorization:
+      "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiYXciLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3ZlcnNpb24iOiJWMy41IiwibmJmIjoxNjcyNjY2NjkwLCJleHAiOjE2ODEzMDY2OTAsImlhdCI6MTY3MjY2NjY5MH0.Pr9t21HPo8NkVNQRN5PMVK9mLx_Zoc-daVNPcCls3oE",
+  },
+})
+  .then((response) => {
+    console.log(response.json());
+  })
+  .then((data) => {
+    //handle data
+    console.log(data);
+  })
+  .catch((error) => {
+    console.log(error);
+  });

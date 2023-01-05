@@ -35,11 +35,12 @@
   box-shadow: 1px 1px 5px 2px var(--shadow);
   border-radius: 10px;
   padding-left: 30px;
+  overflow: hidden;
 }
 
 .top-corp > h4 {
   color: var(--accent);
-  margin: 10px;
+  margin: 10px 0;
 }
 
 .graphs {
@@ -61,7 +62,6 @@
   display: flex;
   justify-content: center;
   transition: all 0.3s ease-in-out;
-  /* // margin-top: 230px; */
   transform: rotatex(180deg);
   transform-origin: top;
 }
@@ -69,6 +69,7 @@
 .top-corp .graph-item {
   position: relative;
   margin-top: 220px;
+  z-index: 2;
 }
 .graph-item > .tc-label {
   font-size: clamp(0.5rem, 2vw, 0.6rem);
@@ -79,4 +80,39 @@
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+}
+.top-corp .graph-label {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.top-corp .graph-label {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 40px;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 225px;
+}
+.top-corp .graph-label .linear {
+  display: flex;
+  gap: 10px;
+}
+.top-corp .graph-label .linear span:nth-child(1) {
+  font-size: clamp(0.5rem, 2vw, 0.7rem);
+  margin-left: 10px;
+  color: var(--shade);
+}
+.top-corp .graph-label .linear span:nth-child(2) {
+  width: 100%;
+  height: 1px;
+  background-color: var(--shade);
+  opacity: 0.3;
+  z-index: 1;
+  margin: auto 10px auto 10px;
 }

@@ -9,8 +9,8 @@
   --shadow: rgba(200, 200, 200, 0.5);
   --sidebarwidth: 200px;
   --topbarheight: 100px;
-  --top-corp-user-height: 300px;
-  --top-corp-user-width: 600px;
+  --data-height: 300px;
+  --data-width: 600px;
   --top-corp-graph-width: 60px;
   font-family: "Montserrat-Reg";
 }

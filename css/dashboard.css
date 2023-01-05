@@ -1,9 +1,24 @@
+.dashboard {
+  width: calc(100vw - var(--sidebarwidth));
+  height: calc(100vh - var(--topbarheight));
+  margin-left: var(--sidebarwidth);
+  margin-top: var(--topbarheight);
+  display: grid;
+  grid-template-areas:
+    "data1 data1 data2 data2"
+    "data1 data1 data2 data2"
+    "data3 data3 data4 data4"
+    "data3 data3 data4 data4";
+  gap: 10px;
+  padding: 10px;
+}
+
 .top-corp-user {
-  height: var(--top-corp-user-height);
-  width: var(--top-corp-user-width);
-  top: calc(var(--topbarheight) + 20px);
-  left: calc(var(--sidebarwidth) + 10px);
-  position: absolute;
+  grid-area: data1;
+  height: 100%;
+  width: 100%;
+
+  /* position: absolute; */
   box-shadow: 1px 1px 5px 2px var(--shadow);
   border-radius: 10px;
   padding: 10px;
@@ -27,15 +42,14 @@
 /* ... Top Corporation Graph */
 
 .top-corp {
-  height: 300px;
-  width: 600px;
-  top: calc(var(--top-corp-user-height) + 140px);
-  left: calc(var(--sidebarwidth) + 10px);
-  position: absolute;
+  grid-area: data3;
+  height: 100%;
+  width: 100%;
   box-shadow: 1px 1px 5px 2px var(--shadow);
   border-radius: 10px;
   padding-left: 30px;
   overflow: hidden;
+  position: relative;
 }
 
 .top-corp > h4 {
@@ -115,4 +129,14 @@
   opacity: 0.3;
   z-index: 1;
   margin: auto 10px auto 10px;
+}
+
+/* ... Top Outlets */
+.top-outlets {
+  grid-area: data2;
+  height: 100%;
+  width: 100%;
+  box-shadow: 1px 1px 5px 2px var(--shadow);
+  border-radius: 10px;
+  padding: 10px;
 }

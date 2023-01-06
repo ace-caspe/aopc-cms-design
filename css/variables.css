@@ -2,8 +2,9 @@
   --light: white;
   --dark: Black;
   --primary: black;
-  --secondary: #d7d2cb;
-  --secondary-light: white;
+  --secondary-light: #d7d2cb;
+  --secondary-dark: #979699;
+  --secondary-brown: #887861;
   --accent: #c89328;
   --shade: rgba(125, 125, 125, 0.5);
   --shadow: rgba(200, 200, 200, 0.5);

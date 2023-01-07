@@ -54,8 +54,8 @@ corporate.map((value, key) => {
 // Top User Graph, Please 4 data only and make sure that the data value are converted to percentage
 const topBusinesOutlet = [
   {
-    name: "Al Sufra",
-    totalVisit: 10, //percentage
+    name: "Others",
+    totalVisit: 50, //percentage
   },
   {
     name: "El Faro",
@@ -63,23 +63,23 @@ const topBusinesOutlet = [
   },
   {
     name: "Toro Toro",
-    totalVisit: 30, //percentage
+    totalVisit: 20, //percentage
   },
   {
-    name: "Others",
-    totalVisit: 40, //percentage
+    name: "Al Sufra",
+    totalVisit: 5, //percentage
   },
 ];
 
-const pieGraphMovement = (elementContainer = "", data) => {
+const pieGraphMovement = (elementContainer, data) => {
   let oldValue = 0;
   let styleString = "";
   let startingPoint = "";
   const color = {
-    0: " var(--secondary-light)",
-    1: " var(--secondary-dark)",
-    2: " var(--primary)",
-    3: " var(--accent)",
+    0: " var(--accent)",
+    1: " var(--primary)",
+    2: " var(--secondary-brown)",
+    3: " var(--secondary-light)",
   };
   data.map((value, key) => {
     startingPoint = oldValue == 0 ? "" : `${oldValue}%`;
@@ -96,7 +96,35 @@ const pieGraphMovement = (elementContainer = "", data) => {
     .setAttribute("style", `background: conic-gradient(${styleString})`);
 };
 
-pieGraphMovement(".to-pie-graph", topBusinesOutlet);
+const populateInfo = (elementContainer, data) => {
+  let element = document.querySelector(`${elementContainer}`);
+  data.map((value, key) => {
+    // console.log();
+    element.children[key].children[1].innerText = value.name;
+    element.children[key].children[2].innerText = `${value.totalVisit}%`;
+  });
+};
+
+const populateTable = (elementContainer, data) => {
+  let element = document
+    .querySelector(`${elementContainer}`)
+    .children[0].getElementsByTagName("tbody");
+  data.map((value, key) => {
+    if (value.name !== "Others") {
+      let newRow = element[0].insertRow();
+      let nameCell = newRow.insertCell();
+      let valueCell = newRow.insertCell();
+      var nameNode = document.createTextNode(value.name);
+      var valueNode = document.createTextNode(value.totalVisit);
+      nameCell.appendChild(nameNode);
+      valueCell.appendChild(valueNode);
+    }
+  });
+};
+
+populateTable("#to-pie-table", topBusinesOutlet);
+pieGraphMovement("#to-pie-graph", topBusinesOutlet);
+populateInfo("#to-pie-graph-info", topBusinesOutlet);
 
 // fetch("http://192.168.100.90/api/ApiBusiness/BusinessList", {
 //   method: "GET",

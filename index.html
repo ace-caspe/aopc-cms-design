@@ -114,7 +114,7 @@
       <div class="user-panel">
         <div class="language">
           <select class="lang-selector">
-            <option value="en">🇺🇸 English</option>
+            <option value="en">🇺🇸 Eng (US)</option>
             <option value="ar">🇦🇪 Arabic</option>
           </select>
         </div>
@@ -133,6 +133,7 @@
     </div>
     <main>
       <div class="dashboard">
+        <!-- Top Corp User  -->
         <div class="top-corp-user">
           <h4>Top {} corporate users</h4>
           <table class="myTable">
@@ -192,6 +193,7 @@
           </table>
           <a href="#">View All</a>
         </div>
+        <!-- Top Corp  -->
         <div class="top-corp">
           <h4>Top 5 corporates</h4>
           <div class="graphs">
@@ -243,84 +245,229 @@
             </div>
           </div>
         </div>
-
+        <!-- Top Outlets  -->
         <div class="top-outlets">
-          <div class="to-pie-graph-info">
-            <div class="data">
-              <span
-                class="data-label"
-                style="background-color: var(--accent)"
-              ></span>
-              <span class="data-name" style="color: var(--accent)"
-                >Business1</span
-              >
-              <span class="data-value" style="color: var(--accent)">40%</span>
+          <div class=""><h4>Top 3 Business Outlets</h4></div>
+          <div class="outlet-data">
+            <div class="to-pie-graph-info" id="to-pie-graph-info">
+              <div class="data">
+                <span
+                  class="data-label"
+                  style="background-color: var(--accent)"
+                ></span>
+                <span class="data-name" style="color: var(--accent)"
+                  >Others</span
+                >
+                <span class="data-value" style="color: var(--accent)">40%</span>
+              </div>
+              <div class="data">
+                <span
+                  class="data-label"
+                  style="background-color: var(--primary)"
+                ></span>
+                <span class="data-name" style="color: var(--primary)"
+                  >Business1</span
+                >
+                <span class="data-value" style="color: var(--primary)"
+                  >30%</span
+                >
+              </div>
+              <div class="data">
+                <span
+                  class="data-label"
+                  style="background-color: var(--secondary-brown)"
+                ></span>
+                <span class="data-name" style="color: var(--secondary-brown)"
+                  >Business2</span
+                >
+                <span class="data-value" style="color: var(--secondary-brown)"
+                  >20%</span
+                >
+              </div>
+              <div class="data">
+                <span
+                  class="data-label"
+                  style="background-color: var(--secondary-light)"
+                ></span>
+                <span class="data-name" style="color: var(--secondary-light)"
+                  >Business3</span
+                >
+                <span class="data-value" style="color: var(--secondary-light)">
+                  10%</span
+                >
+              </div>
             </div>
-            <div class="data">
-              <span
-                class="data-label"
-                style="background-color: var(--primary)"
-              ></span>
-              <span class="data-name" style="color: var(--primary)"
-                >Business2</span
-              >
-              <span class="data-value" style="color: var(--primary)">30%</span>
+            <div class="to-pie-graph" id="to-pie-graph"></div>
+            <div class="top-table" id="to-pie-table">
+              <table class="myTable">
+                <thead>
+                  <th>Business Outlet</th>
+                  <th>Total Visit</th>
+                </thead>
+                <tbody></tbody>
+              </table>
             </div>
-            <div class="data">
-              <span
-                class="data-label"
-                style="background-color: var(--secondary-light)"
-              ></span>
-              <span class="data-name" style="color: var(--secondary-light)"
-                >Business3</span
-              >
-              <span class="data-value" style="color: var(--secondary-light)"
-                >20%</span
-              >
-            </div>
-            <div class="data">
-              <span
-                class="data-label"
-                style="background-color: var(--secondary-brown)"
-              ></span>
-              <span class="data-name" style="color: var(--secondary-brown)"
-                >Business4</span
-              >
-              <span class="data-value" style="color: var(--secondary-brown)">
-                10%</span
-              >
-            </div>
-          </div>
-          <div class="to-pie-graph"></div>
-          <div class="top-table">
-            <table class="myTable">
-              <thead>
-                <th></th>
-                <th></th>
-                <th></th>
-              </thead>
-              <tbody>
-                <tr>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                </tr>
-                <tr>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                </tr>
-                <tr>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                </tr>
-              </tbody>
-            </table>
           </div>
         </div>
-        <div class="top-users"></div>
-        <div class="top-privileges"></div>
+
+        <!-- Top Outlets  -->
+
+        <!-- Top Users  -->
+        <div class="top-users">
+          <div class=""><h4>Top 3 Most Active Users</h4></div>
+          <div class="user-data">
+            <div class="tu-pie-graph-info">
+              <div class="data">
+                <span
+                  class="data-label"
+                  style="background-color: var(--accent)"
+                ></span>
+                <span class="data-name" style="color: var(--accent)"
+                  >Others</span
+                >
+                <span class="data-value" style="color: var(--accent)">40%</span>
+              </div>
+              <div class="data">
+                <span
+                  class="data-label"
+                  style="background-color: var(--primary)"
+                ></span>
+                <span class="data-name" style="color: var(--primary)"
+                  >John Doe</span
+                >
+                <span class="data-value" style="color: var(--primary)"
+                  >30%</span
+                >
+              </div>
+              <div class="data">
+                <span
+                  class="data-label"
+                  style="background-color: var(--secondary-brown)"
+                ></span>
+                <span class="data-name" style="color: var(--secondary-brown)"
+                  >Jane Doe</span
+                >
+                <span class="data-value" style="color: var(--secondary-brown)"
+                  >20%</span
+                >
+              </div>
+              <div class="data">
+                <span
+                  class="data-label"
+                  style="background-color: var(--secondary-light)"
+                ></span>
+                <span class="data-name" style="color: var(--secondary-light)"
+                  >Alfred Doe</span
+                >
+                <span class="data-value" style="color: var(--secondary-light)">
+                  10%</span
+                >
+              </div>
+            </div>
+            <div class="tu-pie-graph"></div>
+            <div class="top-table">
+              <table class="myTable">
+                <thead>
+                  <th>Name</th>
+                  <th>Total Visit</th>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>John Doe</td>
+                    <td>500</td>
+                  </tr>
+                  <tr>
+                    <td>Jane Doe</td>
+                    <td>300</td>
+                  </tr>
+                  <tr>
+                    <td>Alfred Doe</td>
+                    <td>200</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+        <!-- Top Users  -->
+        <!-- Top Privileges  -->
+        <div class="top-privileges">
+          <div class=""><h4>Top 3 Most Used privileges</h4></div>
+          <div class="user-data">
+            <div class="tp-pie-graph-info">
+              <div class="data">
+                <span
+                  class="data-label"
+                  style="background-color: var(--accent)"
+                ></span>
+                <span class="data-name" style="color: var(--accent)"
+                  >Others</span
+                >
+                <span class="data-value" style="color: var(--accent)">40%</span>
+              </div>
+              <div class="data">
+                <span
+                  class="data-label"
+                  style="background-color: var(--primary)"
+                ></span>
+                <span class="data-name" style="color: var(--primary)"
+                  >John Doe</span
+                >
+                <span class="data-value" style="color: var(--primary)"
+                  >30%</span
+                >
+              </div>
+              <div class="data">
+                <span
+                  class="data-label"
+                  style="background-color: var(--secondary-brown)"
+                ></span>
+                <span class="data-name" style="color: var(--secondary-brown)"
+                  >Jane Doe</span
+                >
+                <span class="data-value" style="color: var(--secondary-brown)"
+                  >20%</span
+                >
+              </div>
+              <div class="data">
+                <span
+                  class="data-label"
+                  style="background-color: var(--secondary-light)"
+                ></span>
+                <span class="data-name" style="color: var(--secondary-light)"
+                  >Alfred Doe</span
+                >
+                <span class="data-value" style="color: var(--secondary-light)">
+                  10%</span
+                >
+              </div>
+            </div>
+            <div class="tp-pie-graph"></div>
+            <div class="top-table">
+              <table class="myTable">
+                <thead>
+                  <th>Name</th>
+                  <th>Total Visit</th>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>John Doe</td>
+                    <td>500</td>
+                  </tr>
+                  <tr>
+                    <td>Jane Doe</td>
+                    <td>300</td>
+                  </tr>
+                  <tr>
+                    <td>Alfred Doe</td>
+                    <td>200</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+        <!-- Top Privileges  -->
       </div>
     </main>
     <div class="footer"></div>

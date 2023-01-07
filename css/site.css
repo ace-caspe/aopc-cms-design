@@ -1,9 +1,12 @@
 @import "variables.css";
+@import "globals.css";
 @import "topbar.css";
 @import "sidebar.css";
 @import "main.css";
-@import "table.css";
+@import "table-basic.css";
+@import "table-medium.css";
 @import "dashboard.css";
+@import "business-page.css";
 
 * {
   margin: 0;

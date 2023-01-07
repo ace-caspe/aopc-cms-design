@@ -1,0 +1,54 @@
+table.myTableMedium {
+  width: 95%;
+  margin-top: 5px;
+  border-radius: 10px;
+  -webkit-border-horizontal-spacing: 0;
+  margin: 0 auto;
+}
+table.myTableMedium thead {
+  background-color: var(--light);
+}
+table.myTableMedium th {
+  height: 40px;
+  color: var(--dark);
+  border: 0;
+  font-size: clamp(0.5rem, 2vw, 0.7rem);
+  border-bottom: 1px solid var(--shade);
+  text-align: left;
+}
+table.myTableMedium th:first-child {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  gap: 10px;
+}
+
+table.myTableMedium tbody {
+  background-color: var(--white);
+}
+
+table.myTableMedium tbody tr:nth-child(even) {
+  background-color: var(--shade);
+}
+table.myTableMedium td {
+  vertical-align: top;
+  font-size: clamp(0.5rem, 2vw, 0.7rem);
+  color: var(--dark);
+}
+
+table.myTableMedium tbody tr td:nth-child(1) {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 10px;
+}
+table.myTableMedium tbody tr td:nth-child(1) p:nth-child(1) {
+  font-size: clamp(0.3rem, 2vw, 0.5rem);
+}
+
+table.myTableMedium tbody tr td:nth-child(1) p:nth-child(2) {
+  width: 100px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}

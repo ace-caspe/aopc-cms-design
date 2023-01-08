@@ -4,7 +4,12 @@
   width: 100%;
   box-shadow: 1px 1px 5px 2px var(--shadow);
   border-radius: 10px;
-
+  display: flex;
+  flex-direction: column;
   overflow: auto;
   position: relative;
+}
+.list-head {
+  display: flex;
+  justify-content: space-between;
 }

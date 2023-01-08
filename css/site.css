@@ -1,5 +1,7 @@
 @import "variables.css";
 @import "globals.css";
+@import "buttons.css";
+@import "search.css";
 @import "topbar.css";
 @import "sidebar.css";
 @import "main.css";

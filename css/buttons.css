@@ -1,0 +1,37 @@
+.add-btn {
+  width: 20%;
+  font-size: clamp(0.5rem, 2vw, 0.8rem);
+  margin: 10px;
+  padding: 5px;
+  background-color: var(--accent);
+  text-align: center;
+  border-radius: 10px;
+  box-shadow: 1px 1px 2px 2px var(--shade);
+  cursor: pointer;
+  color: var(--light);
+}
+
+.add-btn:hover {
+  box-shadow: 1px 1px 2px 3px var(--shade);
+}
+.add-btn:active {
+  box-shadow: inset 1px 1px 1px 2px var(--shade);
+}
+
+.tbl-actions {
+  display: flex;
+  gap: 5px;
+  margin: 0 5px;
+  justify-content: center;
+  padding: 5px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+.tbl-actions:hover {
+  background-color: var(--accent);
+}
+.tbl-actions svg {
+}
+.tbl-actions a {
+  margin: auto;
+}

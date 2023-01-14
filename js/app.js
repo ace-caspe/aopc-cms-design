@@ -55,19 +55,19 @@ corporate.map((value, key) => {
 const topBusinesOutlet = [
   {
     name: "Others",
-    totalVisit: 50, //percentage
+    totalVisit: 40, //percentage
   },
   {
     name: "El Faro",
-    totalVisit: 20, //percentage
+    totalVisit: 10, //percentage
   },
   {
     name: "Toro Toro",
-    totalVisit: 20, //percentage
+    totalVisit: 10, //percentage
   },
   {
     name: "Al Sufra",
-    totalVisit: 5, //percentage
+    totalVisit: 10, //percentage
   },
 ];
 

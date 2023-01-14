@@ -95,6 +95,7 @@ table.myTableLarge tbody tr:hover td:nth-child(1) .actions {
 }
 table.myTableLarge tbody tr:hover td:nth-child(1) img {
   filter: none;
+  transform: scale(1.2);
 }
 table.myTableLarge tbody tr:hover td:nth-child(1) p:nth-child(1) {
   opacity: 1;

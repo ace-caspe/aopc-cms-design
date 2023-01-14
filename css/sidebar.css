@@ -65,6 +65,12 @@
   height: 35px;
   overflow: hidden;
   transition: all 0.3s ease-in-out;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.sidenav ul.sub-nav li > a {
+  width: 100%;
 }
 
 li.maintenance:hover ~ .sub-nav {

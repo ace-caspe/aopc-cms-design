@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Alfardan Oyster Privilege Club</title>
+  </head>
+  <style>
+    body {
+      margin: 0;
+      box-sizing: border-box;
+      display: flex;
+      flex-direction: column;
+      font-family: "Montserrat";
+    }
+    @font-face {
+      font-family: "Montserrat";
+      src: url("https://www.alfardanoysterprivilegeclub.com/build/assets/Montserrat-Regular-dcfe8df2.ttf");
+    }
+    .header {
+      width: 200px;
+      height: 120px;
+      overflow: hidden;
+      margin: 50px auto;
+    }
+    .body {
+      width: 500px;
+      margin: 5px auto;
+      font-size: 13px;
+    }
+    .body p {
+      margin: 20px 0;
+    }
+    ul li {
+      list-style: none;
+    }
+    .footer {
+      width: 500px;
+      margin: 20px auto;
+      font-size: 13px;
+    }
+    .citation span {
+      color: #c89328;
+    }
+    .body span {
+      color: #c89328;
+    }
+  </style>
+  <body>
+    <div class="header">
+      <img
+        src=" https://www.alfardanoysterprivilegeclub.com/assets/img/AOPC-Black.png"
+        alt="Alfardan Oyster Privilege Club"
+        width="100%"
+      />
+    </div>
+    <div class="body">
+      <p class="citation">Dear <span>{{ Name }}</span></p>
+      <p class="body">
+        A QR code associated with {{ employee Name }} was successfully scanned
+        from <span>{{ City_Name Region_name }}</span>.
+      </p>
+
+      <p class="body">
+        The following device information was recorded at the time of the scan:
+      </p>
+      <ul>
+        <li>IP Address:</li>
+        <li>City:</li>
+        <li>Region:</li>
+        <li>Country:</li>
+        <li>Postal Code:</li>
+        <li>Zip Code:</li>
+        <li>Area Code:</li>
+        <li>Longitude:</li>
+        <li>Latitude:</li>
+        <li>Date Time of Scan:</li>
+      </ul>
+    </div>
+    <p class="footer">
+      Regards, <br />
+      <br />
+      Alfardan Oyster Privilege Club App
+    </p>
+  </body>
+</html>

@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="../fontawesome/css/fontawesome.css"
+      rel="stylesheets"
+    />
+    <link
+      rel="stylesheet"
+      href="../fontawesome/css/brands.css"
+      rel="stylesheets"
+    />
+    <link
+      rel="stylesheet"
+      href="../fontawesome/css/solid.css"
+      rel="stylesheets"
+    />
+
+    <title>Document</title>
+  </head>
+  <style>
+    @font-face {
+      font-family: "Montserrat-Reg";
+      src: url("/fonts/Montserrat/Montserrat-Regular.ttf");
+    }
+    @font-face {
+      font-family: "Montserrat-Bold";
+      src: url("/fonts/Montserrat/Montserrat-Bold.ttf");
+    }
+    body {
+      margin: 0;
+      box-sizing: border-box;
+    }
+    .login-container {
+      background-image: url("../img/black-cover-pattern.jpg");
+      height: 100vh;
+      width: 100vw;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    form {
+      width: 40%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 10px;
+    }
+    form h1 {
+      text-align: center;
+      color: #c89328;
+      font-family: "Montserrat-Bold";
+    }
+    form .cl-input {
+      font-family: "Montserrat-Reg";
+      height: 30px;
+      border: none;
+      padding: 5px 10px;
+      box-shadow: inset 1px 2px 2px 1px rgba(0, 0, 0, 0.4);
+      border-radius: 5px;
+      font-size: clamp(0.8rem, 2vw, 0.9rem);
+    }
+    form .pass-cont {
+      font-family: "Montserrat-Reg";
+      background-color: white;
+      display: flex;
+      box-shadow: inset 1px 2px 2px 1px rgba(0, 0, 0, 0.4);
+      border-radius: 5px;
+      overflow: hidden;
+    }
+    form .pass-cont > .cl-pass {
+      height: 30px;
+      background-color: transparent;
+      border: none;
+      padding: 5px 10px;
+      font-size: clamp(0.8rem, 2vw, 0.9rem);
+    }
+    .ln-generate {
+      color: #c89328;
+      font-family: "Montserrat-Reg";
+    }
+    form .pass-cont > #view-pass {
+      display: flex;
+      justify-content: center;
+      width: 100%;
+      align-items: center;
+      padding: 5px 10px;
+      box-shadow: 1px 2px 2px 1px rgba(0, 0, 0, 0.595);
+      background-color: #d7d2cb;
+      cursor: pointer;
+    }
+
+    .cb {
+      width: 100%;
+      position: relative;
+      font-family: "Montserrat-Reg";
+    }
+    .cb .label {
+      font-size: clamp(0.7rem, 2vw, 0.9em);
+      margin-left: 30px;
+      color: #c89328;
+    }
+    .cb .label a {
+      color: #c89328;
+    }
+    .cb:hover .checkmark {
+      background-color: #c89328;
+    }
+    .cb .cl-checkbox {
+      display: none;
+    }
+    .cb .cl-checkbox:checked ~ .checkmark {
+      background-color: #c89328;
+    }
+    .cb .cl-checkbox:checked ~ .checkmark:after {
+      display: block;
+    }
+    .cb .checkmark {
+      height: 18px;
+      width: 18px;
+      background-color: rgb(205, 205, 205);
+      position: absolute;
+      left: 0;
+      border-radius: 2px;
+    }
+    .cb .checkmark:hover {
+      background-color: #c89328;
+    }
+    .cb .checkmark:after {
+      content: "";
+      position: absolute;
+      display: none;
+    }
+    .cb .checkmark:after {
+      top: 2px;
+      left: 6px;
+      width: 3px;
+      height: 8px;
+      border: solid white;
+      border-width: 0 3px 3px 0;
+      transform: rotate(45deg);
+    }
+    .cl-submit {
+      background-color: #c89328;
+      border: none;
+      padding: 5px 10px;
+      border-radius: 5px;
+      color: white;
+      font-size: clamp(0.9rem, 2vw, 0.9em);
+    }
+    .ln-cancel {
+      color: #c89328;
+      text-align: center;
+      font-size: clamp(0.9rem, 2vw, 0.9em);
+      text-decoration: none;
+      font-family: "Montserrat-Reg";
+    }
+  </style>
+  <body>
+    <div class="login-container">
+      <form action="/register-user" method="POST" class="reg-form">
+        <h1>User Registration</h1>
+        <input
+          type="text"
+          placeholder="First Name"
+          class="cl-input"
+          name="fname"
+          required
+        />
+        <input
+          type="text"
+          placeholder="Last Name"
+          class="cl-input"
+          name="lname"
+          required
+        />
+        <input
+          type="text"
+          placeholder="Username"
+          class="cl-input"
+          name="username"
+          required
+        />
+        <input
+          type="email"
+          placeholder="Work Email"
+          class="cl-input"
+          name="email"
+          required
+        />
+        <div class="pass-cont">
+          <input
+            type="password"
+            placeholder="Password"
+            class="cl-pass"
+            id="password"
+            name="password"
+            required
+          />
+          <span id="view-pass"><i class="fa fa-eye-slash"></i></span>
+        </div>
+        <a class="ln-generate" id="generate-pass">Generate Password</a>
+        <input
+          type="tel"
+          placeholder="Mobile Number"
+          class="cl-input"
+          name="mobile"
+          required
+        />
+        <input
+          type="text"
+          placeholder="Address"
+          class="cl-input"
+          name="address"
+          required
+        />
+        <label class="cb" for="tnc">
+          <span class="label">
+            Agree to <a href="#">Terms and Conditions.</a></span
+          >
+          <input
+            type="checkbox"
+            name="tnc"
+            id="tnc"
+            class="cl-checkbox"
+            required
+          />
+          <span class="checkmark"></span>
+        </label>
+        <label class="cb" for="pnp">
+          <span class="label">
+            Agree to
+            <a
+              target="_blank"
+              href="../assets/files/Mobile App - Privacy Policy - 12-12-2022.pdf"
+              >Privacy and Policy.</a
+            ></span
+          >
+          <input
+            type="checkbox"
+            name="pnp"
+            id="pnp"
+            class="cl-checkbox"
+            required
+          />
+          <span class="checkmark"></span>
+        </label>
+
+        <input type="submit" class="cl-submit" />
+        <a class="ln-cancel" href="/">CANCEL</a>
+      </form>
+    </div>
+  </body>
+  <script>
+    const generatePassword = document.querySelector("#generate-pass");
+    const passwordInput = document.querySelector("#password");
+    const chars =
+      "1234567890abcdefghijklmnopqrstuvwxyzABCDEF!@#$%^&*()-._~./,<>?";
+    const viewpass = document.querySelector("#view-pass");
+    generatePassword.addEventListener("click", () => {
+      passwordInput.value = randomString(10, chars);
+    });
+    viewpass.addEventListener("click", () => {
+      if (passwordInput.type === "password") {
+        passwordInput.type = "text";
+        viewpass.innerHTML = '<i class="fa fa-eye"></i>';
+      } else {
+        passwordInput.type = "password";
+        viewpass.innerHTML = '<i class="fa fa-eye-slash"></i>';
+      }
+    });
+    const randomString = (length, chars) => {
+      var result = "";
+      for (var i = length; i > 0; --i)
+        result += chars[Math.floor(Math.random() * chars.length)];
+      return result;
+    };
+  </script>
+</html>

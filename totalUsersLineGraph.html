@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title></title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="" />
+  </head>
+  <style>
+    .chart-container {
+      width: 800px;
+      height: 400px;
+    }
+  </style>
+  <body>
+    <div class="chart-container">
+      <canvas id="myChart"></canvas>
+    </div>
+    <script src="
+    https://cdn.jsdelivr.net/npm/chart.js@4.2.1/dist/chart.umd.min.js
+    "></script>
+    <script>
+      // Create the chart context
+      var ctx = document.getElementById("myChart").getContext("2d");
+
+      // Define the chart data
+      var chartData = {
+        labels: ["18", "19", "20", "21", "22", "23", "24"], // conditions to made
+        datasets: [
+          {
+            label: "",
+            data: [100, 150, 200, 250, 300, 350, 400], // create an aync ajax function
+            backgroundColor: "rgba(255, 99, 132, 0.2)",
+            borderColor: "rgba(255, 99, 132, 1)",
+            borderWidth: 1,
+          },
+        ],
+      };
+
+      // Define the chart options
+      var chartOptions = {
+        responsive: true,
+        maintainAspectRatio: false,
+
+        scales: {
+          yAxes: [
+            {
+              ticks: {
+                beginAtZero: true,
+              },
+            },
+          ],
+        },
+      };
+
+      // Create the chart instance
+      var myChart = new Chart(ctx, {
+        type: "line",
+        data: chartData,
+        options: chartOptions,
+      });
+
+      // Update the chart data
+      setInterval(function () {
+        chartData.datasets[0].data = chartData.datasets[0].data
+          .map
+          //   function () {
+          //     return Math.floor(Math.random() * 1000);
+          //   }
+          ();
+        myChart.update();
+      }, 5000);
+    </script>
+  </body>
+</html>

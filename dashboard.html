@@ -143,284 +143,387 @@
     <main>
       <div class="main-container">
         <!-- Top Corp User  -->
-        <div class="top-corp-user">
-          <canvas id="myChart"></canvas>
+
+        <div class="row-group1">
+          <div class="top-corp-user">
+            <canvas id="myChart"></canvas>
+          </div>
+          <div class="inner-group">
+            <div class="new-users">
+              <div class="controls">
+                <h4>New User Registration</h4>
+                <div class="filters">
+                  <div class="timespan">
+                    <a>Last 7 Days &#9660;</a>
+                    <div class="nur-timespan-dropdown">
+                      <li>Last 15 Days</li>
+                      <li>Last 30 Days</li>
+                      <li>Last 12 Months</li>
+                      <li>Custom Date</li>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="user-counter">
+                <div id="new-registered">
+                  <p class="count">5</p>
+                  <p>New User</p>
+                </div>
+                <svg
+                  width="150"
+                  height="60"
+                  viewBox="0 0 72 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M71.0607 13.0607C71.6464 12.4749 71.6464 11.5251 71.0607 10.9393L61.5147 1.3934C60.9289 0.807611 59.9792 0.807611 59.3934 1.3934C58.8076 1.97919 58.8076 2.92893 59.3934 3.51472L67.8787 12L59.3934 20.4853C58.8076 21.0711 58.8076 22.0208 59.3934 22.6066C59.9792 23.1924 60.9289 23.1924 61.5147 22.6066L71.0607 13.0607ZM0 13.5H70V10.5H0V13.5Z"
+                    fill="#C89328"
+                  />
+                </svg>
+                <div id="all-user">
+                  <p class="count">65</p>
+                  <p>Total User</p>
+                </div>
+              </div>
+              <p class="nur-note">
+                <span id="percent-registered">60%</span> of expected user are
+                registered.
+              </p>
+            </div>
+            <div class="supports">
+              <div class="controls">
+                <h4>Support Center</h4>
+              </div>
+              <div class="support-counter">
+                <div id="support-unattended">
+                  <p class="count">5</p>
+                </div>
+              </div>
+              <p class="nur-note">Total concern that need to attends.</p>
+            </div>
+          </div>
+        </div>
+        <div class="row-group2">
+          <!-- Top Restaurants  -->
+          <div class="top-restaurants">
+            <div class=""><h4>Top 3 Most Clicked Restaurant</h4></div>
+            <div class="outlet-data">
+              <div class="to-pie-graph" id="to-pie-graph"></div>
+              <div class="tr-pie-graph-info" id="tr-pie-graph-info">
+                <div class="data">
+                  <span
+                    class="data-label"
+                    style="background-color: var(--accent)"
+                  ></span>
+                  <span class="data-name" style="color: var(--accent)"
+                    >Others</span
+                  >
+                  <span class="data-value" style="color: var(--accent)"
+                    >40%</span
+                  >
+                </div>
+                <div class="data">
+                  <span
+                    class="data-label"
+                    style="background-color: var(--primary)"
+                  ></span>
+                  <span class="data-name" style="color: var(--primary)"
+                    >Business1</span
+                  >
+                  <span class="data-value" style="color: var(--primary)"
+                    >30%</span
+                  >
+                </div>
+                <div class="data">
+                  <span
+                    class="data-label"
+                    style="background-color: var(--secondary-brown)"
+                  ></span>
+                  <span class="data-name" style="color: var(--secondary-brown)"
+                    >Business2</span
+                  >
+                  <span class="data-value" style="color: var(--secondary-brown)"
+                    >20%</span
+                  >
+                </div>
+                <div class="data">
+                  <span
+                    class="data-label"
+                    style="background-color: var(--secondary-light)"
+                  ></span>
+                  <span class="data-name" style="color: var(--secondary-light)"
+                    >Business3</span
+                  >
+                  <span
+                    class="data-value"
+                    style="color: var(--secondary-light)"
+                  >
+                    10%</span
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="controls">
+              <div class="timespan">
+                <a>Last 7 Days &#9660;</a>
+                <div class="top-timespan-dropdown">
+                  <li>Last 15 Days</li>
+                  <li>Last 30 Days</li>
+                  <li>Last 12 Months</li>
+                  <li>Custom Date</li>
+                </div>
+              </div>
+              <a class="btn-view-more">View Details</a>
+            </div>
+          </div>
+
+          <!-- Top Outlets  -->
+
+          <!-- Top Hospitality  -->
+          <div class="top-hospitality">
+            <div class=""><h4>Top 3 Most Clicked Hospitality</h4></div>
+            <div class="user-data">
+              <div class="th-pie-graph"></div>
+              <div class="th-pie-graph-info">
+                <div class="data">
+                  <span
+                    class="data-label"
+                    style="background-color: var(--accent)"
+                  ></span>
+                  <span class="data-name" style="color: var(--accent)"
+                    >Others</span
+                  >
+                  <span class="data-value" style="color: var(--accent)"
+                    >40%</span
+                  >
+                </div>
+                <div class="data">
+                  <span
+                    class="data-label"
+                    style="background-color: var(--primary)"
+                  ></span>
+                  <span class="data-name" style="color: var(--primary)"
+                    >John Doe</span
+                  >
+                  <span class="data-value" style="color: var(--primary)"
+                    >30%</span
+                  >
+                </div>
+                <div class="data">
+                  <span
+                    class="data-label"
+                    style="background-color: var(--secondary-brown)"
+                  ></span>
+                  <span class="data-name" style="color: var(--secondary-brown)"
+                    >Jane Doe</span
+                  >
+                  <span class="data-value" style="color: var(--secondary-brown)"
+                    >20%</span
+                  >
+                </div>
+                <div class="data">
+                  <span
+                    class="data-label"
+                    style="background-color: var(--secondary-light)"
+                  ></span>
+                  <span class="data-name" style="color: var(--secondary-light)"
+                    >Alfred Doe</span
+                  >
+                  <span
+                    class="data-value"
+                    style="color: var(--secondary-light)"
+                  >
+                    10%</span
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="controls">
+              <div class="timespan">
+                <a>Last 7 Days &#9660;</a>
+                <div class="tu-timespan-dropdown">
+                  <li>Last 15 Days</li>
+                  <li>Last 30 Days</li>
+                  <li>Last 12 Months</li>
+                  <li>Custom Date</li>
+                </div>
+              </div>
+              <a class="btn-view-more">View Details</a>
+            </div>
+          </div>
+          <!-- Top Users  -->
+          <!-- Top Privileges  -->
+          <div class="top-stores">
+            <div class="head"><h4>Top 3 Most Clicked Store</h4></div>
+            <div class="user-data">
+              <div class="ts-pie-graph"></div>
+              <div class="ts-pie-graph-info">
+                <div class="data">
+                  <span
+                    class="data-label"
+                    style="background-color: var(--accent)"
+                  ></span>
+                  <span class="data-name" style="color: var(--accent)"
+                    >Others</span
+                  >
+                  <span class="data-value" style="color: var(--accent)"
+                    >40%</span
+                  >
+                </div>
+                <div class="data">
+                  <span
+                    class="data-label"
+                    style="background-color: var(--primary)"
+                  ></span>
+                  <span class="data-name" style="color: var(--primary)"
+                    >John Doe</span
+                  >
+                  <span class="data-value" style="color: var(--primary)"
+                    >30%</span
+                  >
+                </div>
+                <div class="data">
+                  <span
+                    class="data-label"
+                    style="background-color: var(--secondary-brown)"
+                  ></span>
+                  <span class="data-name" style="color: var(--secondary-brown)"
+                    >Jane Doe</span
+                  >
+                  <span class="data-value" style="color: var(--secondary-brown)"
+                    >20%</span
+                  >
+                </div>
+                <div class="data">
+                  <span
+                    class="data-label"
+                    style="background-color: var(--secondary-light)"
+                  ></span>
+                  <span class="data-name" style="color: var(--secondary-light)"
+                    >Alfred Doe</span
+                  >
+                  <span
+                    class="data-value"
+                    style="color: var(--secondary-light)"
+                  >
+                    10%</span
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="controls">
+              <div class="timespan">
+                <a>Last 7 Days &#9660;</a>
+                <div class="tp-timespan-dropdown">
+                  <li>Last 15 Days</li>
+                  <li>Last 30 Days</li>
+                  <li>Last 12 Months</li>
+                  <li>Custom Date</li>
+                </div>
+              </div>
+              <a class="btn-view-more">View Details</a>
+            </div>
+          </div>
+          <!-- Top Privileges  -->
         </div>
         <!-- Top Corp  -->
-        <div class="top-corp">
-          <h4>Top 5 corporates</h4>
-          <div class="graphs">
-            <div class="graph-item">
-              <span class="tc-item" id="item1" title="0"></span>
-              <span class="tc-label">Company1</span>
-            </div>
-            <div class="graph-item">
-              <span class="tc-item" id="item2" title="0"> </span>
-              <span class="tc-label">Company2</span>
-            </div>
-            <div class="graph-item">
-              <span class="tc-item" id="item3" title="0"></span>
-              <span class="tc-label">Company3</span>
-            </div>
-            <div class="graph-item">
-              <span class="tc-item" id="item4" title="0"></span>
-              <span class="tc-label">Company4</span>
-            </div>
-            <div class="graph-item">
-              <span class="tc-item" id="item5" title="0"></span>
-              <span class="tc-label">Company5</span>
-            </div>
-          </div>
-          <div class="graph-label">
-            <div class="linear">
-              <span>25</span>
-              <span></span>
-            </div>
-            <div class="linear">
-              <span>20</span>
-              <span></span>
-            </div>
-            <div class="linear">
-              <span>15</span>
-              <span></span>
-            </div>
-            <div class="linear">
-              <span>10</span>
-              <span></span>
-            </div>
-            <div class="linear">
-              <span>5</span>
-              <span></span>
-            </div>
-            <div class="linear">
-              <span>0</span>
-              <span></span>
-            </div>
-          </div>
-        </div>
-        <!-- Top Outlets  -->
-        <div class="top-outlets">
-          <div class=""><h4>Top 3 Business Outlets</h4></div>
-          <div class="outlet-data">
-            <div class="to-pie-graph-info" id="to-pie-graph-info">
-              <div class="data">
-                <span
-                  class="data-label"
-                  style="background-color: var(--accent)"
-                ></span>
-                <span class="data-name" style="color: var(--accent)"
-                  >Others</span
-                >
-                <span class="data-value" style="color: var(--accent)">40%</span>
-              </div>
-              <div class="data">
-                <span
-                  class="data-label"
-                  style="background-color: var(--primary)"
-                ></span>
-                <span class="data-name" style="color: var(--primary)"
-                  >Business1</span
-                >
-                <span class="data-value" style="color: var(--primary)"
-                  >30%</span
-                >
-              </div>
-              <div class="data">
-                <span
-                  class="data-label"
-                  style="background-color: var(--secondary-brown)"
-                ></span>
-                <span class="data-name" style="color: var(--secondary-brown)"
-                  >Business2</span
-                >
-                <span class="data-value" style="color: var(--secondary-brown)"
-                  >20%</span
-                >
-              </div>
-              <div class="data">
-                <span
-                  class="data-label"
-                  style="background-color: var(--secondary-light)"
-                ></span>
-                <span class="data-name" style="color: var(--secondary-light)"
-                  >Business3</span
-                >
-                <span class="data-value" style="color: var(--secondary-light)">
-                  10%</span
-                >
+        <div class="row-group3">
+          <div class="cta-table">
+            <div class="controls">
+              <h4>Call to Actions</h4>
+              <div class="filters">
+                <div class="categories">
+                  <a>All Categoiess &#9660;</a>
+                  <div class="cta-category-dropdown">
+                    <li>Restaurant</li>
+                    <li>Hotel</li>
+                    <li>Store</li>
+                  </div>
+                </div>
+                <div class="timespan">
+                  <a>Last 7 Days &#9660;</a>
+                  <div class="cta-timespan-dropdown">
+                    <li>Last 15 Days</li>
+                    <li>Last 30 Days</li>
+                    <li>Last 12 Months</li>
+                    <li>Custom Date</li>
+                  </div>
+                </div>
               </div>
             </div>
-            <div class="to-pie-graph" id="to-pie-graph"></div>
-            <div class="top-table" id="to-pie-table">
-              <table class="myTable">
-                <thead>
-                  <th>Business Outlet</th>
-                  <th>Total Visit</th>
-                </thead>
-                <tbody></tbody>
-              </table>
-            </div>
-          </div>
-        </div>
 
-        <!-- Top Outlets  -->
-
-        <!-- Top Users  -->
-        <div class="top-users">
-          <div class=""><h4>Top 3 Most Active Users</h4></div>
-          <div class="user-data">
-            <div class="tu-pie-graph-info">
-              <div class="data">
-                <span
-                  class="data-label"
-                  style="background-color: var(--accent)"
-                ></span>
-                <span class="data-name" style="color: var(--accent)"
-                  >Others</span
-                >
-                <span class="data-value" style="color: var(--accent)">40%</span>
-              </div>
-              <div class="data">
-                <span
-                  class="data-label"
-                  style="background-color: var(--primary)"
-                ></span>
-                <span class="data-name" style="color: var(--primary)"
-                  >John Doe</span
-                >
-                <span class="data-value" style="color: var(--primary)"
-                  >30%</span
-                >
-              </div>
-              <div class="data">
-                <span
-                  class="data-label"
-                  style="background-color: var(--secondary-brown)"
-                ></span>
-                <span class="data-name" style="color: var(--secondary-brown)"
-                  >Jane Doe</span
-                >
-                <span class="data-value" style="color: var(--secondary-brown)"
-                  >20%</span
-                >
-              </div>
-              <div class="data">
-                <span
-                  class="data-label"
-                  style="background-color: var(--secondary-light)"
-                ></span>
-                <span class="data-name" style="color: var(--secondary-light)"
-                  >Alfred Doe</span
-                >
-                <span class="data-value" style="color: var(--secondary-light)">
-                  10%</span
-                >
-              </div>
-            </div>
-            <div class="tu-pie-graph"></div>
-            <div class="top-table">
-              <table class="myTable">
-                <thead>
+            <table>
+              <thead>
+                <tr>
                   <th>Name</th>
-                  <th>Total Visit</th>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td>John Doe</td>
-                    <td>500</td>
-                  </tr>
-                  <tr>
-                    <td>Jane Doe</td>
-                    <td>300</td>
-                  </tr>
-                  <tr>
-                    <td>Alfred Doe</td>
-                    <td>200</td>
-                  </tr>
-                </tbody>
-              </table>
+                  <th>Categories</th>
+                  <th>Call</th>
+                  <th>Email</th>
+                  <th>Book</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>
+                    <h5>El Faro</h5>
+                    <p>St. Regis Doha</p>
+                  </td>
+                  <td>Restaurant</td>
+                  <td>2</td>
+                  <td>3</td>
+                  <td>10</td>
+                </tr>
+                <tr>
+                  <td>
+                    <h5>St. Regis Doha</h5>
+                    <p>Doha Qatar</p>
+                  </td>
+                  <td>Hotel</td>
+                  <td>1</td>
+                  <td>1</td>
+                  <td>5</td>
+                </tr>
+              </tbody>
+            </table>
+            <a class="btn-view-more">View More</a>
+          </div>
+          <div class="news-feed">
+            <div class="controls">
+              <h4>New Feed Clicks</h4>
+              <div class="filters">
+                <div class="timespan">
+                  <a>Last 7 Days &#9660;</a>
+                  <div class="nfc-timespan-dropdown">
+                    <li>Last 15 Days</li>
+                    <li>Last 30 Days</li>
+                    <li>Last 12 Months</li>
+                    <li>Custom Date</li>
+                  </div>
+                </div>
+              </div>
             </div>
+            <table>
+              <tbody>
+                <tr>
+                  <td>
+                    <h4>Lobito Fire and Sea</h4>
+                    <p>Lobito de Mar</p>
+                  </td>
+                  <td>200</td>
+                </tr>
+                <tr>
+                  <td>
+                    <h4>Lobito Fire and Sea</h4>
+                    <p>Lobito de Mar</p>
+                  </td>
+                  <td>170</td>
+                </tr>
+              </tbody>
+            </table>
+            <a class="btn-view-more">View More</a>
           </div>
         </div>
-        <!-- Top Users  -->
-        <!-- Top Privileges  -->
-        <div class="top-privileges">
-          <div class=""><h4>Top 3 Most Used privileges</h4></div>
-          <div class="user-data">
-            <div class="tp-pie-graph-info">
-              <div class="data">
-                <span
-                  class="data-label"
-                  style="background-color: var(--accent)"
-                ></span>
-                <span class="data-name" style="color: var(--accent)"
-                  >Others</span
-                >
-                <span class="data-value" style="color: var(--accent)">40%</span>
-              </div>
-              <div class="data">
-                <span
-                  class="data-label"
-                  style="background-color: var(--primary)"
-                ></span>
-                <span class="data-name" style="color: var(--primary)"
-                  >John Doe</span
-                >
-                <span class="data-value" style="color: var(--primary)"
-                  >30%</span
-                >
-              </div>
-              <div class="data">
-                <span
-                  class="data-label"
-                  style="background-color: var(--secondary-brown)"
-                ></span>
-                <span class="data-name" style="color: var(--secondary-brown)"
-                  >Jane Doe</span
-                >
-                <span class="data-value" style="color: var(--secondary-brown)"
-                  >20%</span
-                >
-              </div>
-              <div class="data">
-                <span
-                  class="data-label"
-                  style="background-color: var(--secondary-light)"
-                ></span>
-                <span class="data-name" style="color: var(--secondary-light)"
-                  >Alfred Doe</span
-                >
-                <span class="data-value" style="color: var(--secondary-light)">
-                  10%</span
-                >
-              </div>
-            </div>
-            <div class="tp-pie-graph"></div>
-            <div class="top-table">
-              <table class="myTable">
-                <thead>
-                  <th>Name</th>
-                  <th>Total Visit</th>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td>John Doe</td>
-                    <td>500</td>
-                  </tr>
-                  <tr>
-                    <td>Jane Doe</td>
-                    <td>300</td>
-                  </tr>
-                  <tr>
-                    <td>Alfred Doe</td>
-                    <td>200</td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-          </div>
-        </div>
-        <!-- Top Privileges  -->
       </div>
     </main>
     <div class="footer"></div>

@@ -19,47 +19,15 @@ toggle.addEventListener("change", function () {
   }
 });
 
-let corporate = [
-  {
-    name: "Comapny1",
-    totalVisit: "10",
-  },
-  {
-    name: "Comapny2",
-    totalVisit: "110",
-  },
-  {
-    name: "Comapny3",
-    totalVisit: "50",
-  },
-  {
-    name: "Odecci",
-    totalVisit: "100",
-  },
-  {
-    name: "asdasd dasda asdasd",
-    totalVisit: "60",
-  },
-];
-
-const topCorpItem = document.querySelectorAll(".graph-item");
-corporate.map((value, key) => {
-  topCorpItem[key].children[0].style.height = `${value.totalVisit}px`;
-  topCorpItem[
-    key
-  ].children[0].title = `${value.totalVisit} total employee visit`;
-  topCorpItem[key].children[1].innerHTML = value.name;
-});
-
 // Top User Graph, Please 4 data only and make sure that the data value are converted to percentage
 const topBusinesOutlet = [
   {
     name: "Others",
-    totalVisit: 40, //percentage
+    totalVisit: 30, //percentage
   },
   {
     name: "El Faro",
-    totalVisit: 10, //percentage
+    totalVisit: 20, //percentage
   },
   {
     name: "Toro Toro",
@@ -122,9 +90,9 @@ const populateTable = (elementContainer, data) => {
   });
 };
 
-populateTable("#to-pie-table", topBusinesOutlet);
+//populateTable("#to-pie-table", topBusinesOutlet);
 pieGraphMovement("#to-pie-graph", topBusinesOutlet);
-populateInfo("#to-pie-graph-info", topBusinesOutlet);
+populateInfo("#tr-pie-graph-info", topBusinesOutlet);
 
 // fetch("http://192.168.100.90/api/ApiBusiness/BusinessList", {
 //   method: "GET",

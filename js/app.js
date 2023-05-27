@@ -23,11 +23,11 @@ toggle.addEventListener("change", function () {
 const topBusinesOutlet = [
   {
     name: "Others",
-    totalVisit: 30, //percentage
+    totalVisit: 40, //percentage
   },
   {
     name: "El Faro",
-    totalVisit: 20, //percentage
+    totalVisit: 30, //percentage
   },
   {
     name: "Toro Toro",

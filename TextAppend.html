@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title></title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="" />
+    <style>
+      .textContainer {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        border: 1px solid grey;
+        width: fit-content;
+        padding: 10px;
+      }
+      .textCont {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+      }
+      .parentTextContainer {
+        display: flex;
+        gap: 5px;
+      }
+      .parentTextContainer textarea {
+        height: 40px;
+        font-size: 1rem;
+        padding: 0 10px;
+        border: 0;
+        box-shadow: inset 1px 1px 3px 1px rgba(0, 0, 0, 0.5);
+        border-radius: 10px;
+      }
+      .parentTextContainer .btnAddParentText {
+        border: none;
+        background-color: #c89328;
+        color: white;
+        height: 40px;
+        width: 40px;
+        border-radius: 10px;
+        transition: all ease-in;
+      }
+      .parentTextContainer .btnAddParentText:hover {
+        border: 2px solid #c89328;
+        color: #c89328;
+        background-color: white;
+      }
+      .childTextContainer {
+        display: flex;
+        flex-direction: column;
+        margin-left: 10px;
+        gap: 10px;
+      }
+      .childTextItem {
+        display: flex;
+        gap: 10px;
+      }
+      .childTextContainer textarea {
+        height: 40px;
+        font-size: 1rem;
+        padding: 0 10px;
+        border: 0;
+        box-shadow: inset 1px 1px 3px 1px rgba(0, 0, 0, 0.5);
+        border-radius: 10px;
+      }
+      .childTextContainer .btnAddChildText {
+        border: none;
+        background-color: #c89328;
+        color: white;
+        height: 40px;
+        width: 40px;
+        border-radius: 10px;
+      }
+      .childTextContainer .btnAddChildText:hover {
+        border: 2px solid #c89328;
+        color: #c89328;
+        background-color: white;
+      }
+      .btnRemoveParentText {
+        border: none;
+        border: 2px solid #c89328;
+        color: #c89328;
+        background-color: white;
+        height: 40px;
+        width: 40px;
+        border-radius: 10px;
+      }
+      .btnRemoveChildText {
+        border: none;
+        border: 2px solid #c89328;
+        color: #c89328;
+        background-color: white;
+        height: 40px;
+        width: 40px;
+        border-radius: 10px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="textContainer">
+      <div id="txtCont1" class="textCont">
+        <div id="parentTextContainer" class="parentTextContainer">
+          ●<textarea></textarea>
+          <button onclick="addParentText()" class="btnAddParentText">+</button>
+        </div>
+        <div class="childTextContainer">
+          <div id="childTextContainer1" class="childTextItem">
+            ○<textarea></textarea
+            ><button onclick="addChildParentText('1')" class="btnAddChildText">
+              +
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script
+      src="https://code.jquery.com/jquery-3.7.0.min.js"
+      integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g="
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      var datevalue = "2023-05-21 00:00:00";
+      console.log("db format: " + datevalue);
+      console.log("new format: " + reformatDate(datevalue));
+      function reformatDate(date) {
+        var index = date.split("-");
+        return index[2].split(" ")[0] + "/" + index[1] + "/" + index[0];
+      }
+
+      var textContainer = $(".textContainer");
+      var textContainerCounter = $(".textContainer .textCont").length;
+      var textChildContainer = $(".childTextContainer");
+      function addParentText() {
+        textContainer.append(`<div id="txtCont${
+          textContainerCounter + 1
+        }" class="textCont"><div id="parentTextContainer" class="parentTextContainer">
+            ●<textarea></textarea>  <button onclick="removeParentTextContainer(${
+              textContainerCounter + 1
+            })" class="btnRemoveParentText">-</button>
+      </div>
+      <div class="childTextContainer" >
+        <div id="childTextContainer${
+          textContainerCounter + 1
+        }" class="childTextItem">
+            ○<textarea></textarea><button onclick="addChildParentText('${
+              textContainerCounter + 1
+            }')" class="btnAddChildText" >+</button>
+        </div></div></div>`);
+        textContainerCounter = textContainerCounter + 1;
+      }
+      function addChildParentText(count) {
+        console.log("#textCont" + count);
+        $("#txtCont" + count + " .childTextContainer")
+          .append(` <div id="childTextContainer${
+          count + 1
+        }" class="childTextItem">
+            ○<textarea></textarea> 
+            <button onclick="removeChildTextContainer('${
+              count + 1
+            }')" class="btnRemoveChildText">-</button>
+      </div>`);
+      }
+      function removeParentTextContainer(count) {
+        $("#txtCont" + count).remove();
+      }
+      function removeChildTextContainer(count) {
+        $("#childTextContainer" + count).remove();
+      }
+    </script>
+  </body>
+</html>

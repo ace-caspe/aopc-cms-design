@@ -116,6 +116,7 @@
           </div>
         </div>
       </div>
+      <button id="text-submit" onclick="send()">submit</button>
     </div>
 
     <script
@@ -159,7 +160,7 @@
           .append(` <div id="childTextContainer${
           count + 1
         }" class="childTextItem">
-            ○<textarea></textarea> 
+            ○<textarea></textarea>
             <button onclick="removeChildTextContainer('${
               count + 1
             }')" class="btnRemoveChildText">-</button>
@@ -170,6 +171,26 @@
       }
       function removeChildTextContainer(count) {
         $("#childTextContainer" + count).remove();
+      }
+      function send() {
+        var output = "";
+        $(".textCont #parentTextContainer textarea").map(function (
+          index,
+          value
+        ) {
+          var parentText = $(value).val();
+          output += parentText;
+          var childText = $(
+            "#txtCont" +
+              (index + 1) +
+              " .childTextContainer .childTextItem textarea"
+          ).map(function (childIndex, childValue) {
+            var choldText = $(childValue).val();
+            output += "||" + choldText;
+          });
+          output += "^";
+        });
+        console.log(output);
       }
     </script>
   </body>

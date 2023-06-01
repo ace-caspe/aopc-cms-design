@@ -192,6 +192,61 @@
         });
         console.log(output);
       }
+
+      const sampleArray = "test||test1||test2||test3^jump||jump1||jump2||jump3";
+
+      populate(sampleArray);
+      function populate(output) {
+        const textContainer = $(".textContainer");
+        let textCont = "";
+        output.split("^").map((value, parentIndex) => {
+          console.log(value);
+          textCont += `  <div id="txtCont${parentIndex + 1}" class="textCont">
+    
+            ${value
+              .split("||")
+              .map((value, childIndex) => {
+                return childIndex == 0
+                  ? `<div id="parentTextContainer" class="parentTextContainer">
+                    ●<textarea>${value}</textarea>
+                    <button onclick="${
+                      parentIndex == 0
+                        ? `addParentText()`
+                        : `removeParentTextContainer(${parentIndex + 1})`
+                    }" class="${
+                      parentIndex == 0
+                        ? "btnAddParentText"
+                        : "btnRemoveParentText"
+                    }">${parentIndex == 0 ? "+" : "-"}</button>
+                  </div>`
+                  : `<div class="childTextContainer">
+                    <div id="childTextContainer${
+                      parentIndex + 1 + "" + childIndex
+                    }" class="childTextItem">
+                      ○<textarea>${value}</textarea
+                      ><button onclick="${
+                        childIndex == 1
+                          ? "addChildParentText(1)"
+                          : `removeChildTextContainer(${
+                              parentIndex + 1 + "" + childIndex
+                            })`
+                      }" class="${
+                      childIndex == 1
+                        ? "btnAddChildText"
+                        : "btnRemoveParentText"
+                    }">
+                      ${childIndex == 1 ? "+" : "-"}
+                      </button>
+                    </div>
+                  </div>`;
+              })
+              .join("")}
+
+      </div>`;
+        });
+
+        textContainer.html(textCont);
+      }
     </script>
   </body>
 </html>
